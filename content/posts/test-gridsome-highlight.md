@@ -11,7 +11,7 @@ description: "Test file for syntax highlighting"
 
 
 
-```html
+```html:title=exemple.vue
 <template>
   <Layout>
     <h2>Latest blog posts</h2>
