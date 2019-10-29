@@ -46,6 +46,10 @@
     counter-reset: linenumber;
 }
 
+code {
+    background-color: var(--bg-code);
+  }
+
 
 
 .gridsome-highlight-code-line {

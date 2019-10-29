@@ -3984,10 +3984,10 @@ gridsome-plugin-remark-codetitle@^0.2.2:
   dependencies:
     unist-util-visit "^2.0.0"
 
-gridsome-plugin-remark-prismjs-all@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/gridsome-plugin-remark-prismjs-all/-/gridsome-plugin-remark-prismjs-all-0.2.0.tgz#6a9dd34882460cbbfe7284a9bf73468e0025a220"
-  integrity sha512-Hgs1eS9rVu5pKwu+eTQ2/GyA/jAZojojIPL3JieK3hO5BBfQxyMIv4fh7c1rnTsNoqcOLnpHvXn2bB77Okt7Uw==
+gridsome-plugin-remark-prismjs-all@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-remark-prismjs-all/-/gridsome-plugin-remark-prismjs-all-0.2.3.tgz#512e7df0a5f16add2a2fa8a353f55d2498cf22ac"
+  integrity sha512-up2sfdXVAxQNVzFEh5YoJm90vGQq8eE+LgDfbK++zABA5Hs5uLtw9kqbrSXvHwwgNKIi85RgiNK1V/8JjVjuRQ==
   dependencies:
     lodash "^4.17.15"
     parse-numeric-range "^0.0.2"
