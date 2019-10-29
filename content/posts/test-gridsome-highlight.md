@@ -15,11 +15,15 @@ const myvar = "some value";
 ```
 ``````
 
+Result:
+
 ```js
 const myvar = "some value";
 ```
 
 ## Code Title
+
+To add a title your code, you can use the `codeTitle` option:
 
 ``````md
 ```js{codeTitle: "In src/main.js"}
@@ -29,6 +33,8 @@ require("prismjs/plugins/command-line/prism-command-line.css")
 ```
 ``````
 
+Result:
+
 ```js{codeTitle: "In src/main.js"}
 require("prismjs/themes/prism-solarizedlight.css")
 require("prismjs/plugins/line-numbers/prism-line-numbers.css")
@@ -36,6 +42,8 @@ require("prismjs/plugins/command-line/prism-command-line.css")
 ```
 
 ## Lines Numbers
+
+To see the line numbers alongside your code, you can use the `numberLines` option:
 
 `````md
 ```html{numberLines: true}
@@ -52,6 +60,8 @@ require("prismjs/plugins/command-line/prism-command-line.css")
 ```
 ``````
 
+Result:
+
 ```html{numberLines: true}
 <template>
   <Layout>
@@ -64,6 +74,9 @@ require("prismjs/plugins/command-line/prism-command-line.css")
   </Layout>
 </template>
 ```
+
+You can also start numbering at any index you wish (here, numbering
+will start at index 21):
 
 `````md
 ```html{numberLines: 21}
@@ -79,6 +92,8 @@ require("prismjs/plugins/command-line/prism-command-line.css")
 </template>
 ```
 ``````
+
+Result:
 
 ```html{numberLines: 21}
 <template>
@@ -95,6 +110,14 @@ require("prismjs/plugins/command-line/prism-command-line.css")
 
 ## Lines Highlighting
 
+You can also add line highlighting. It adds a span around lines of code with a
+special class `.gridsome-highlight-code-line` that you can target with styles.
+
+You can specify the highlighted lines outside of the code block.
+In the following code snippet, lines 3 and 5 through 7 will get the line
+highlighting. The line range parsing is done with
+[https://www.npmjs.com/package/parse-numeric-range](https://www.npmjs.com/package/parse-numeric-range).
+
 `````md
 ```html{3,5-7}
 <template>
@@ -109,6 +132,8 @@ require("prismjs/plugins/command-line/prism-command-line.css")
 </template>
 ```
 ``````
+
+Result:
 
 ```html{3,5-7}
 <template>
@@ -139,6 +164,8 @@ require("prismjs/plugins/command-line/prism-command-line.css")
 </template>
 ```
 ``````
+
+Result
 
 ```html{3,5-7}{numberLines: 21}{codeTitle: "In src/pages/Index.vue"}
 <template>
