@@ -1,5 +1,5 @@
 {
-  "name": "demo-gridsome-plugin-remark-prismjs-all",
+  "name": "gridsome-plugin-demo",
   "private": true,
   "scripts": {
     "build": "gridsome build",
