@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome Blog Starter',
+  siteName: 'demo-gridsome-plugin-remark-prismjs-all',
   siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
 
   templates: {
@@ -38,8 +38,7 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
-        'gridsome-plugin-remark-codetitle',
-        '@gridsome/remark-prismjs'
+        'gridsome-plugin-remark-prismjs-all',
       ]
     }
   }
