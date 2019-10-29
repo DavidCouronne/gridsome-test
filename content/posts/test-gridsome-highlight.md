@@ -11,12 +11,12 @@ description: "Test file for syntax highlighting"
 
 ``````markdown{codeTitle: "In a markdown file"}
 ```js
-const myvar = 'some value";
+const myvar = "some value";
 ```
 ``````
 
 ```js
-const myvar = 'some value";
+const myvar = "some value";
 ```
 
 ## Code Title
