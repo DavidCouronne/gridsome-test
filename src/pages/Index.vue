@@ -23,6 +23,7 @@ query {
         description
         cover_image (width: 770, height: 380, blur: 10)
         path
+        author
         tags {
           id
           title

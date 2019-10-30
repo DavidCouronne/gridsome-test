@@ -2,9 +2,11 @@
 title: Demo gridsome-plugin-remark-prismjs-all
 date: 2019-10-28
 published: true
+author: "David Couronné"
 tags: ['Markdown', 'Releases']
 canonical_url: false
 description: "Test file for syntax highlighting"
+cover_image: ./images/snapshot-tomorrow.png
 ---
 
 ## Basic usage

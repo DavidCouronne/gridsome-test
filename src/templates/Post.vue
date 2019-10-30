@@ -40,17 +40,78 @@ export default {
     PostMeta,
     PostTags
   },
+  
   metaInfo () {
     return {
-      title: this.$page.post.title,
+      script: [{
+      type: 'application/ld+json',
+      json: {
+        '@context': 'http://schema.org',
+        "@type":"BlogPosting",
+        "description": this.$page.post.description,
+        "datePublished": this.$page.post.date,
+        "author": {
+          "name": this.$page.post.author
+          },
+        "headline": this.$page.post.title,
+              }
+    }],
+      title: `${this.$page.post.title} ${this.$page.post.tag ? '- '+this.$page.post.tag.name : ''}`,
       meta: [
         {
           name: 'description',
           content: this.$page.post.description
-        }
+        },
+        {
+          property: "og:title",
+          content: this.$page.post.title
+        },
+        { property: "og:description", content: this.description(this.$page.post) },
+        { property: "og:url", content: this.postUrl },
+        { property: "og:image", content: this.ogImageUrl },
       ]
     }
-  }
+  },
+  methods: {
+    imageLoadError (e) {
+      e.target.src = `/images/authors/default.png`
+    },
+    description(post, length, clamp) {
+      if (post.description) {
+        return post.description
+      }
+      length = length || 280
+      clamp = clamp || ' ...'
+      let text = post.content.replace(/<pre(.|\n)*?<\/pre>/gm, '').replace(/<[^>]+>/gm, '')
+      return text.length > length ? `${ text.slice(0, length)}${clamp}` : text
+    },
+    titleCase(str) {
+      return str.replace('-', ' ')
+                .split(' ')
+                .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+                .join(' ')
+    },
+  },
+  computed: {
+    config () {
+      return config
+    },
+    /* avatar () {
+      return `/images/authors/${this.$page.post.author.id}.png`
+    }, */
+    /* postIsOlderThanOneYear () {
+      let postDate = moment(this.$page.post.datetime)
+      return moment().diff(postDate, 'years') > 0 ? true : false
+    }, */
+    postUrl () {
+      let siteUrl = this.config.siteUrl
+      let postSlug = this.$page.post.slug
+      return postSlug ? `${siteUrl}/${postSlug}/` : `${siteUrl}/${slugify(this.$page.post.title)}/`
+    },
+    ogImageUrl () {
+      return this.$page.post.cover_image || `${this.config.siteUrl}/images/bleda-card.png`
+    }
+  },
 }
 </script>
 
@@ -68,6 +129,7 @@ query Post ($id: ID!) {
     }
     description
     content
+    author
     cover_image (width: 860, blur: 10)
   }
 }
