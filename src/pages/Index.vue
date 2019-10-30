@@ -35,6 +35,8 @@ query {
 }
 </page-query>
 
+
+
 <script>
 import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'

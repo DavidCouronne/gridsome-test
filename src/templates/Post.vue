@@ -67,7 +67,7 @@ export default {
           content: this.$page.post.title
         },
         { property: "og:description", content: this.description(this.$page.post) },
-        { property: "og:url", content: this.postUrl },
+        
         { property: "og:image", content: this.ogImageUrl },
       ]
     }
@@ -93,9 +93,7 @@ export default {
     },
   },
   computed: {
-    config () {
-      return config
-    },
+    
     /* avatar () {
       return `/images/authors/${this.$page.post.author.id}.png`
     }, */
@@ -103,17 +101,15 @@ export default {
       let postDate = moment(this.$page.post.datetime)
       return moment().diff(postDate, 'years') > 0 ? true : false
     }, */
-    postUrl () {
-      let siteUrl = this.config.siteUrl
-      let postSlug = this.$page.post.slug
-      return postSlug ? `${siteUrl}/${postSlug}/` : `${siteUrl}/${slugify(this.$page.post.title)}/`
-    },
+    
     ogImageUrl () {
-      return this.$page.post.cover_image || `${this.config.siteUrl}/images/bleda-card.png`
+      return this.$page.post.cover_image
     }
   },
 }
 </script>
+
+
 
 <page-query>
 query Post ($id: ID!) {
