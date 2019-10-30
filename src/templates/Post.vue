@@ -69,6 +69,9 @@ export default {
         { property: "og:description", content: this.description(this.$page.post) },
         
         { property: "og:image", content: this.ogImageUrl },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: this.$page.post.title },
+        //https://gridsome-plugin-demo.netlify.com/assets/static/snapshot-tomorrow.a67b0b2.4e5be15.png
       ]
     }
   },
@@ -109,7 +112,14 @@ export default {
 }
 </script>
 
-
+<static-query>
+query {
+  metadata{
+    siteUrl
+    pathPrefix
+    }
+    }
+</static-query>
 
 <page-query>
 query Post ($id: ID!) {
