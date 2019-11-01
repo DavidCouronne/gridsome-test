@@ -1,5 +1,5 @@
 ---
-title: Gridsome: Improve security and SEO
+title: "Gridsome: Improve security and SEO"
 date: 2019-11-01
 published: true
 author: "David Couronné"
