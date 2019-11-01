@@ -4,6 +4,7 @@
       <h1 class="post-title__text">
         {{ $page.post.title }}
       </h1>
+      <SEO/>
 
       <PostMeta :post="$page.post" />
 
@@ -33,12 +34,14 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
+import SEO from '~/components/base/SEO.vue'
 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags
+    PostTags,
+    SEO
   },
   
   metaInfo () {
@@ -57,22 +60,7 @@ export default {
               }
     }],
       title: `${this.$page.post.title} ${this.$page.post.tag ? '- '+this.$page.post.tag.name : ''}`,
-      meta: [
-        {
-          name: 'description',
-          content: this.$page.post.description
-        },
-        {
-          property: "og:title",
-          content: this.$page.post.title
-        },
-        { property: "og:description", content: this.description(this.$page.post) },
-        
-        { property: "og:image", content: this.ogImageUrl },
-        { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: this.$page.post.title },
-        //https://gridsome-plugin-demo.netlify.com/assets/static/snapshot-tomorrow.a67b0b2.4e5be15.png
-      ]
+      
     }
   },
   methods: {
