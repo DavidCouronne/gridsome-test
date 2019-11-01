@@ -11,7 +11,7 @@
 
     <div class="post content-box">
       <div class="post__header">
-        <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
+        <g-image class="cover-image" alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
       </div>
 
       <div class="post__content" v-html="$page.post.content" />
@@ -196,4 +196,6 @@ query Post ($id: ID!) {
 .post-author {
   margin-top: calc(var(--space) / 2);
 }
+
+
 </style>
