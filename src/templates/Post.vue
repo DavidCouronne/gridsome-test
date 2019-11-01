@@ -46,19 +46,7 @@ export default {
   
   metaInfo () {
     return {
-      script: [{
-      type: 'application/ld+json',
-      json: {
-        '@context': 'http://schema.org',
-        "@type":"BlogPosting",
-        "description": this.$page.post.description,
-        "datePublished": this.$page.post.date,
-        "author": {
-          "name": this.$page.post.author
-          },
-        "headline": this.$page.post.title,
-              }
-    }],
+      
       title: `${this.$page.post.title} ${this.$page.post.tag ? '- '+this.$page.post.tag.name : ''}`,
       
     }
