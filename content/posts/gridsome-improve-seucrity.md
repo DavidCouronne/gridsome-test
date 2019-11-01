@@ -15,7 +15,11 @@ You can visite and scanne your website at https://securityheaders.com .
 
 If security headers are missing then you will get D Grade even on Netlify.
 
+![Security Report Before](./SecurityReportSummary-before.jpg)
+
 You can Get A grade by just adding few lines of code.
+
+![Security Report After](./SecurityReportSummary-after.jpg)
 
 In your root directory, create a file `netlify.toml`
 
@@ -33,3 +37,16 @@ In your root directory, create a file `netlify.toml`
 ```
 
 This code is from: https://gist.github.com/miguelmota/7c8eabf5745b0e721f41158cc1b6591f
+
+## Improve SEO
+
+### Tools
+
++ https://cards-dev.twitter.com/validator
++ https://search.google.com/structured-data/testing-tool
++ https://opengraphcheck.com/
+
+### Documentation
+
++ https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup
++ https://ogp.me/
