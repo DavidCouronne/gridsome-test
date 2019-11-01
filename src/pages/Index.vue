@@ -1,5 +1,6 @@
 <template>
   <Layout :show-logo="false">
+    <g-link to="/test">Test</g-link>
     <!-- Author intro -->
     <!-- <Author :show-title="true" /> -->
 
