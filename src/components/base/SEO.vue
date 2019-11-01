@@ -1,3 +1,7 @@
+<template>
+    <p></p>
+</template>
+
 <static-query>
 query {
   metadata {
@@ -23,13 +27,13 @@ export default {
           content: this.$static.metadata.siteUrl + this.$page.post.path
         },
 
-        // Some Twiter Cards Tags
+        // Some Twitter Cards Tags
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: this.$page.post.title },
         { name: "twitter:image", content: this.$page.post.cover_image },
         { name: "twitter:description", content: this.$page.post.description }
       ],
-      //Somme ld+json tags
+      //Some ld+json tags
       script: [
         {
           type: "application/ld+json",
