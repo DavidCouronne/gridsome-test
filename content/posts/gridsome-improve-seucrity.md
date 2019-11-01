@@ -34,3 +34,5 @@ In your root directory, create a file `netlify.toml`
     Content-Security-Policy: default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline'
 
 ```
+
+This code is from: https://gist.github.com/miguelmota/7c8eabf5745b0e721f41158cc1b6591f
