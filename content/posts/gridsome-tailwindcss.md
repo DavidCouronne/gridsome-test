@@ -6,7 +6,7 @@ author: "David Couronné"
 tags: ['Gridsome', 'Tailwind CSS']
 canonical_url: false
 description: "Installer Tailwind CSS avec Gridsome sans utiliser de plugin."
-cover_image: https://res.cloudinary.com/dpw19qolx/image/upload/t_cover-image/v1572590743/bernard-hermant-IhcSHrZXFs4-unsplash.jpg
+cover_image: https://res.cloudinary.com/dpw19qolx/image/upload/t_cover-image/v1572706812/khachik-simonian-nXOB-wh4Oyc-unsplash.jpg
 ---
 
 Dans cet article, nous allons juste aborder l'installation et la configuration de tailwindcss dans un projet Gridsome.

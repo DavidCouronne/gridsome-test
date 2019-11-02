@@ -15,7 +15,7 @@ export default {
 
 <style lang="scss">
 .post-meta {
-  font-size: .8em;
-  opacity: .8;
+  
+  color:white;
 }
 </style>

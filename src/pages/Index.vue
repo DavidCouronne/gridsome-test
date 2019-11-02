@@ -1,6 +1,6 @@
 <template>
   <Layout :show-logo="false">
-    <g-link to="/test">Test</g-link>
+    <!-- <g-link to="/test">Test</g-link> -->
     <!-- Author intro -->
     <!-- <Author :show-title="true" /> -->
 
@@ -22,7 +22,7 @@ query {
         date (format: "D. MMMM YYYY")
         timeToRead
         description
-        cover_image (width: 770, height: 380, blur: 10)
+        cover_image
         path
         author
         tags {
