@@ -112,7 +112,7 @@ query Post ($id: ID!) {
     description
     content
     author
-    cover_image (width: 860, blur: 10)
+    cover_image
   }
 }
 </page-query>
