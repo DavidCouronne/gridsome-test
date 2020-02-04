@@ -1,8 +1,9 @@
 // Import main css
 //require("prismjs/themes/prism-solarizedlight.css")
-require('prismjs/themes/prism-tomorrow.css');
-require("prismjs/plugins/line-numbers/prism-line-numbers.css")
-require("prismjs/plugins/command-line/prism-command-line.css")
+//require('prismjs/themes/prism-tomorrow.css');
+//require("prismjs/plugins/line-numbers/prism-line-numbers.css")
+//require("prismjs/plugins/command-line/prism-command-line.css")
+require('gridsome-plugin-remark-prismjs-all/themes/night-owl.css');
 import '~/assets/style/index.css'
 import '~/assets/style/index.scss'
 
