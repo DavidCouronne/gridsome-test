@@ -6,7 +6,7 @@ author: "David Couronné"
 tags: ['Gridsome', 'PrismJS']
 canonical_url: false
 description: "Test file for syntax highlighting"
-cover_image: https://github.com/DavidCouronne/gridsome-plugin-remark-prismjs-all/blob/master/snapshots/snapshot-night-owl.png
+cover_image: ./images/snapshot-tomorrow.png
 ---
 
 ## Basic usage
